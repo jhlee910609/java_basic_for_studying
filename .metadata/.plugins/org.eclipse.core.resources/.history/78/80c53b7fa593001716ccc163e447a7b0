@@ -1,0 +1,14 @@
+package com.synchronizedex.java.lang;
+
+public class BathRoom {
+	
+	public synchronized void openDoor(String name) {
+		System.out.println(name + " 님이 입장하셨습니다.");
+		for(int i=0; i < 10000; i++) {
+			if(i == 10000) {
+				System.out.println("입장 : " + name);
+			}
+		}
+		System.out.println(name + "다 쌌다!!!!!");
+	}
+}

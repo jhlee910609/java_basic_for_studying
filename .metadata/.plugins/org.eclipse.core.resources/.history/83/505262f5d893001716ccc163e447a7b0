@@ -1,0 +1,16 @@
+package com.synchronizedex.java.lang;
+
+public class SyncTest {
+
+	public static void main(String[] args) {
+		BathRoom br = new BathRoom();
+		FamilyThread fahter = new FamilyThread("father", br);
+		FamilyThread mother = new FamilyThread("Mother", br);
+		FamilyThread me = new FamilyThread("Me", br);
+		
+		fahter.start();
+		mother.start();
+		me.start();
+	}
+
+}
