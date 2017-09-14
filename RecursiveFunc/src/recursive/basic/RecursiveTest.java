@@ -1,9 +1,15 @@
 package recursive.basic;
 
+import java.util.List;
+
 public class RecursiveTest {
 
 	public static void main(String[] args) {
 		System.out.println("recursive minus : " + recursiveMinus(10));
+		printNumberReturn();
+		printNumberBreak();
+		
+		
 
 	}
 
@@ -16,4 +22,30 @@ public class RecursiveTest {
 
 		return num + recursiveMinus(num - 1);
 	}
+	
+	static void printNumberBreak() {
+		for(int i=0; i < 100; i++) {
+			System.out.println(i + "");
+			if(i == 55) {
+				System.out.println("===== break 호출");
+				break;
+			}
+		}
+		
+		System.out.println("break 완료 ");
+	}
+	
+	static void printNumberReturn() {
+		for(int i=0; i < 100; i++) {
+			System.out.println(i + "");
+			if(i == 55) {
+				System.out.println("====== return 호출");
+				return;
+			}
+		}
+		
+		System.out.println("return 완료");
+	}
+	
+	
 }
